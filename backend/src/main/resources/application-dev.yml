@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:file:./data/interviewprep_dev;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;AUTO_SERVER=TRUE}
+    driver-class-name: ${DATABASE_DRIVER:org.h2.Driver}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: false # Handled via JPA in local dev mode, enabled for PostgreSQL/Docker
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+logging:
+  level:
+    com.interviewprep: DEBUG
+    org.springframework.security: INFO
+    org.springframework.web: INFO

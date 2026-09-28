@@ -1,0 +1,6 @@
+#FileLock
+#Mon Sep 28 19:51:49 IST 2026
+hostName=Shamir
+id=1a0e864ad661b461fe5dbc97128d8c391bef12a8e6b
+method=file
+server=192.168.0.107\:60749
